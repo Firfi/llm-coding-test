@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20161103055843) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "url_contents", force: :cascade do |t|
     t.string   "content"
     t.integer  "url_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["url_id"], name: "index_url_contents_on_url_id"
+    t.index ["url_id"], name: "index_url_contents_on_url_id", using: :btree
   end
 
   create_table "urls", force: :cascade do |t|
@@ -26,4 +29,5 @@ ActiveRecord::Schema.define(version: 20161103055843) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "url_contents", "urls"
 end

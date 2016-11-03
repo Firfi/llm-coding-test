@@ -14,7 +14,7 @@ no
 
 * Database creation
 
-Sqlite used. 
+Postgres used. 
 
 To create DB,
 
@@ -25,3 +25,6 @@ rake db:migrate
 * Job queue
 
 For simplicity, job queue emulated with perform_now. No job queue services are needed right now.
+
+* API doc
+
