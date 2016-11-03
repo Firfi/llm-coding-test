@@ -28,3 +28,8 @@ For simplicity, job queue emulated with perform_now. No job queue services are n
 
 * API doc
 
+App is deployed on https://llm-coding-test.herokuapp.com/
+
+To parse an url, send POST with `application/json` content type and `{"url": "http://google.ru"}` body on `https://llm-coding-test.herokuapp.com/urls`
+
+To get a list of urls, GET `https://llm-coding-test.herokuapp.com/urls`.
